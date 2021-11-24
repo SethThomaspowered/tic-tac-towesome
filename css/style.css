@@ -1,0 +1,29 @@
+.container {
+    background: black;
+    display: inline-block;
+    margin: 25px 3rem;
+    border: 5px solid black;
+  }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    grid-gap: 5px;
+  }
+.square {
+    /* center the cell content */
+   justify-content: center;
+   align-items: center;
+   display: flex;
+   font-family: Arial;
+   font-size: 3rem;
+   font-weight: bold;
+   background: lemonchiffon;
+}
+
+h1 {
+    color: aquamarine;
+}
+button {
+    display: block;
+}    
