@@ -34,42 +34,52 @@ const winning = () =>{
         && square6.style.background === "green"
         && square9.style.background === "green"){
         alert("Player One wins");
+        reset();
     }else if (square3.style.background === "green"
         && square5.style.background === "green"
         && square7.style.background === "green"){
-        alert("Player One wins")        
+        alert("Player One wins")
+        reset();        
     }else if (square4.style.background === "green"
         && square5.style.background === "green"
         && square6.style.background === "green"){
-        alert("Player One wins")    
+        alert("Player One wins");
+        reset();    
     }else if (square7.style.background === "green"
         && square8.style.background === "green"
         && square9.style.background === "green"){
-        alert("Player One wins")    
+        alert("Player One wins")
+        reset();    
     }else if (square1.style.background === "red"
         && square2.style.background === "red"
         && square3.style.background === "red"){
         alert("Player Two wins")
+        reset();
     }else if (square1.style.background === "red"
         && square4.style.background === "red"
         && square7.style.background === "red"){
         alert("Player Two wins")
+        reset();
     }else if (square1.style.background === "red"
         && square5.style.background === "red"
         && square9.style.background === "red"){
-        alert("Player Two wins")
+        alert("Player Two wins");
+        reset();
     }else if (square2.style.background === "red"
         && square5.style.background === "red"
         && square8.style.background === "red"){
-        alert("Player Two wins")
+        alert("Player Two wins");
+        reset();
     }else if (square3.style.background === "red"
         && square6.style.background === "red"
         && square9.style.background === "red"){
-        alert("Player Two wins")
+        alert("Player Two wins");
+        reset();
     }else if (square3.style.background === "red"
         && square5.style.background === "red"
         && square7.style.background === "red"){
-        alert("Player Two wins")        
+        alert("Player Two wins")
+        reset();        
     }else if (square4.style.background === "red"
         && square5.style.background === "red"
         && square6.style.background === "red"){
@@ -84,6 +94,10 @@ const winning = () =>{
         alert("We have a tie better luck next time.");
         reset();
     }else {
-        alert("Continue playing")
+       if(counter %2 ===0){
+           resetBtn.innerHTML= "Ready Player Two";
+       }else{
+           resetBtn.innerHTML= "Ready Player One";
+       }
     }
 }

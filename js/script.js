@@ -12,6 +12,7 @@ for (let i =0;  i <squares.length; i++) {
                 squares[i].style.background ="green";
             }
             counter++;
+            winning()
         }
     }
 )}
