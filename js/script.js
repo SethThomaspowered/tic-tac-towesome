@@ -1,5 +1,4 @@
 const squares = document.querySelectorAll(".square");
-const square1 = document.querySelector(".square");
 // Counter determines which player is up.
 let counter = 1
 for (let i =0;  i <squares.length; i++) {
@@ -24,3 +23,4 @@ const reset = () => {
 } 
 const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", event => reset());
+
