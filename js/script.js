@@ -20,5 +20,7 @@ const reset = () => {
     for (let i =0; i<squares.length; i++){
         squares[i].style.background='lemonchiffon';
     }
-    counter = 1
+    counter = 1;
 } 
+const resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click", event => reset());
