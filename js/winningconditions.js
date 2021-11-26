@@ -13,91 +13,71 @@ const winning = () =>{
     if (square1.style.background === "green"
         && square2.style.background === "green"
         && square3.style.background === "green"){
-        alert("Player One wins");
-        reset();
+        winnerIs();
     }else if (square1.style.background === "green"
         && square4.style.background === "green"
         && square7.style.background === "green"){
-        alert("Player One wins")
-        reset();
+        winnerIs();
     }else if (square1.style.background === "green"
         && square5.style.background === "green"
         && square9.style.background === "green"){
-        alert("Player One wins")
-        reset();
+        winnerIs();
     }else if (square2.style.background === "green"
         && square5.style.background === "green"
         && square8.style.background === "green"){
-        alert("Player One wins");
-        reset();
+        winnerIs();
     }else if (square3.style.background === "green"
         && square6.style.background === "green"
         && square9.style.background === "green"){
-        alert("Player One wins");
-        reset();
+        winnerIs();
     }else if (square3.style.background === "green"
         && square5.style.background === "green"
         && square7.style.background === "green"){
-        alert("Player One wins")
-        reset();        
+        winnerIs();      
     }else if (square4.style.background === "green"
         && square5.style.background === "green"
         && square6.style.background === "green"){
-        alert("Player One wins");
-        reset();    
+        winnerIs();    
     }else if (square7.style.background === "green"
         && square8.style.background === "green"
         && square9.style.background === "green"){
-        alert("Player One wins")
-        reset();    
+        winnerIs();    
     }else if (square1.style.background === "red"
         && square2.style.background === "red"
         && square3.style.background === "red"){
-        alert("Player Two wins")
-        reset();
+        winnerIs();
     }else if (square1.style.background === "red"
         && square4.style.background === "red"
         && square7.style.background === "red"){
-        alert("Player Two wins")
-        reset();
+        winnerIs();
     }else if (square1.style.background === "red"
         && square5.style.background === "red"
         && square9.style.background === "red"){
-        alert("Player Two wins");
-        reset();
+        winnerIs();
     }else if (square2.style.background === "red"
         && square5.style.background === "red"
         && square8.style.background === "red"){
-        alert("Player Two wins");
-        reset();
+        winnerIs();
     }else if (square3.style.background === "red"
         && square6.style.background === "red"
         && square9.style.background === "red"){
-        alert("Player Two wins");
-        reset();
+        winnerIs();
     }else if (square3.style.background === "red"
         && square5.style.background === "red"
         && square7.style.background === "red"){
-        alert("Player Two wins")
-        reset();        
+        winnerIs();        
     }else if (square4.style.background === "red"
         && square5.style.background === "red"
         && square6.style.background === "red"){
-        alert("Player Two wins")
-        reset();    
+        winnerIs();    
     }else if (square7.style.background === "red"
         && square8.style.background === "red"
         && square9.style.background === "red"){
-        alert("Player Two wins");
-        reset();    
+        winnerIs();    
     }else if(counter >= 10){
         alert("We have a tie better luck next time.");
-        reset();
+        setTimeout(reset, 100);
     }else {
-       if(counter %2 ===0){
-           resetBtn.innerHTML= "Ready Player Two";
-       }else{
-           resetBtn.innerHTML= "Ready Player One";
-       }
+        getActivePlayer();
     }
 }
