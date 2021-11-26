@@ -21,10 +21,13 @@
    background: lemonchiffon;
    cursor: pointer;
 }
-
+body{
+    text-align: center;
+}
 h1 {
     color: aquamarine;
 }
 button {
-    display: block;
+    display: inline-block;
+    text-align: center;
 }    
