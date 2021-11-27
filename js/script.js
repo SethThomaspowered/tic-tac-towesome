@@ -37,4 +37,6 @@ const reset = () => {
 } 
 
 resetBtn.addEventListener("click", event => reset());
-
+let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
+const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
+const randomCatImage = document.querySelector("#randomCatImage");

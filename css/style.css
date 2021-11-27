@@ -32,3 +32,8 @@ button {
     display: inline-block;
     text-align: center;
 }    
+img {
+    height: 350px;
+    width: auto;
+    box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
+}

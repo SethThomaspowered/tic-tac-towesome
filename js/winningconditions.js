@@ -14,6 +14,19 @@ const getWinner=()=>{
 const winnerIs=()=>{
     setTimeout(getWinner, 100);
 } 
+const tieGame = ()=> {fetch(randomCatsEndpoint)
+    .then((response) => {
+        return response.json();
+    })
+    .then((json) =>{
+        console.log(json)
+        let randomCatUrl = json[0].url;
+        randomCatImage.setAttribute('src', randomCatUrl)
+    }).catch(function (err){
+        console.log(err);
+    })
+    alert("We have a tie better luck next time.");
+    setTimeout(reset, 1000);}
 console.log("Winning conditions is working");
 const winning = () =>{
     if (square1.style.background === "green"
@@ -81,8 +94,7 @@ const winning = () =>{
         && square9.style.background === "<h2>O</h2>"){
         winnerIs();    
     }else if(counter >= 10){
-        alert("We have a tie better luck next time.");
-        setTimeout(reset, 100);
+       tieGame()
     }else {
         getActivePlayer();
     }
