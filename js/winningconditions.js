@@ -7,7 +7,13 @@ const square6 = document.querySelector('.six');
 const square7 = document.querySelector('.seven');
 const square8 = document.querySelector('.eight');
 const square9 = document.querySelector('.nine');
-
+const getWinner=()=>{
+    alert(`${activePlayer} is the winner`);
+    reset();
+}
+const winnerIs=()=>{
+    setTimeout(getWinner, 100);
+} 
 console.log("Winning conditions is working");
 const winning = () =>{
     if (square1.style.background === "green"
@@ -42,37 +48,109 @@ const winning = () =>{
         && square8.style.background === "green"
         && square9.style.background === "green"){
         winnerIs();    
-    }else if (square1.style.background === "red"
-        && square2.style.background === "red"
-        && square3.style.background === "red"){
+    }else if (square1.style.background === "<h2>O</h2>"
+        && square2.style.background === "<h2>O</h2>"
+        && square3.style.background === "<h2>O</h2>"){
         winnerIs();
-    }else if (square1.style.background === "red"
-        && square4.style.background === "red"
-        && square7.style.background === "red"){
+    }else if (square1.style.background === "<h2>O</h2>"
+        && square4.style.background === "<h2>O</h2>"
+        && square7.style.background === "<h2>O</h2>"){
         winnerIs();
-    }else if (square1.style.background === "red"
-        && square5.style.background === "red"
-        && square9.style.background === "red"){
+    }else if (square1.style.background === "<h2>O</h2>"
+        && square5.style.background === "<h2>O</h2>"
+        && square9.style.background === "<h2>O</h2>"){
         winnerIs();
-    }else if (square2.style.background === "red"
-        && square5.style.background === "red"
-        && square8.style.background === "red"){
+    }else if (square2.style.background === "<h2>O</h2>"
+        && square5.style.background === "<h2>O</h2>"
+        && square8.style.background === "<h2>O</h2>"){
         winnerIs();
-    }else if (square3.style.background === "red"
-        && square6.style.background === "red"
-        && square9.style.background === "red"){
+    }else if (square3.style.background === "<h2>O</h2>"
+        && square6.style.background === "<h2>O</h2>"
+        && square9.style.background === "<h2>O</h2>"){
         winnerIs();
-    }else if (square3.style.background === "red"
-        && square5.style.background === "red"
-        && square7.style.background === "red"){
+    }else if (square3.style.background === "<h2>O</h2>"
+        && square5.style.background === "<h2>O</h2>"
+        && square7.style.background === "<h2>O</h2>"){
         winnerIs();        
-    }else if (square4.style.background === "red"
-        && square5.style.background === "red"
-        && square6.style.background === "red"){
+    }else if (square4.style.background === "<h2>O</h2>"
+        && square5.style.background === "<h2>O</h2>"
+        && square6.style.background === "<h2>O</h2>"){
         winnerIs();    
-    }else if (square7.style.background === "red"
-        && square8.style.background === "red"
-        && square9.style.background === "red"){
+    }else if (square7.style.background === "<h2>O</h2>"
+        && square8.style.background === "<h2>O</h2>"
+        && square9.style.background === "<h2>O</h2>"){
+        winnerIs();    
+    }else if(counter >= 10){
+        alert("We have a tie better luck next time.");
+        setTimeout(reset, 100);
+    }else {
+        getActivePlayer();
+    }
+}
+const winningTrad = () =>{
+    if (square1.innerHTML === "<h2>X</h2>"
+        && square2.innerHTML === "<h2>X</h2>"
+        && square3.innerHTML === "<h2>X</h2>"){
+        winnerIs();
+    }else if (square1.innerHTML === "<h2>X</h2>"
+        && square4.innerHTML === "<h2>X</h2>"
+        && square7.innerHTML === "<h2>X</h2>"){
+        winnerIs();
+    }else if (square1.innerHTML === "<h2>X</h2>"
+        && square5.innerHTML === "<h2>X</h2>"
+        && square9.innerHTML === "<h2>X</h2>"){
+        winnerIs();
+    }else if (square2.innerHTML === "<h2>X</h2>"
+        && square5.innerHTML === "<h2>X</h2>"
+        && square8.innerHTML === "<h2>X</h2>"){
+        winnerIs();
+    }else if (square3.innerHTML === "<h2>X</h2>"
+        && square6.innerHTML === "<h2>X</h2>"
+        && square9.innerHTML === "<h2>X</h2>"){
+        winnerIs();
+    }else if (square3.innerHTML === "<h2>X</h2>"
+        && square5.innerHTML === "<h2>X</h2>"
+        && square7.innerHTML === "<h2>X</h2>"){
+        winnerIs();      
+    }else if (square4.innerHTML === "<h2>X</h2>"
+        && square5.innerHTML === "<h2>X</h2>"
+        && square6.innerHTML === "<h2>X</h2>"){
+        winnerIs();    
+    }else if (square7.innerHTML === "<h2>X</h2>"
+        && square8.innerHTML === "<h2>X</h2>"
+        && square9.innerHTML === "<h2>X</h2>"){
+        winnerIs();    
+    }else if (square1.innerHTML === "<h2>O</h2>"
+        && square2.innerHTML === "<h2>O</h2>"
+        && square3.innerHTML === "<h2>O</h2>"){
+        winnerIs();
+    }else if (square1.innerHTML === "<h2>O</h2>"
+        && square4.innerHTML === "<h2>O</h2>"
+        && square7.innerHTML === "<h2>O</h2>"){
+        winnerIs();
+    }else if (square1.innerHTML === "<h2>O</h2>"
+        && square5.innerHTML === "<h2>O</h2>"
+        && square9.innerHTML === "<h2>O</h2>"){
+        winnerIs();
+    }else if (square2.innerHTML === "<h2>O</h2>"
+        && square5.innerHTML === "<h2>O</h2>"
+        && square8.innerHTML === "<h2>O</h2>"){
+        winnerIs();
+    }else if (square3.innerHTML === "<h2>O</h2>"
+        && square6.innerHTML === "<h2>O</h2>"
+        && square9.innerHTML === "<h2>O</h2>"){
+        winnerIs();
+    }else if (square3.innerHTML === "<h2>O</h2>"
+        && square5.innerHTML === "<h2>O</h2>"
+        && square7.innerHTML === "<h2>O</h2>"){
+        winnerIs();        
+    }else if (square4.innerHTML === "<h2>O</h2>"
+        && square5.innerHTML === "<h2>O</h2>"
+        && square6.innerHTML === "<h2>O</h2>"){
+        winnerIs();    
+    }else if (square7.innerHTML === "<h2>O</h2>"
+        && square8.innerHTML === "<h2>O</h2>"
+        && square9.innerHTML === "<h2>O</h2>"){
         winnerIs();    
     }else if(counter >= 10){
         alert("We have a tie better luck next time.");
