@@ -12,7 +12,7 @@ const getWinner=()=>{
     reset();
 }
 const winnerIs=()=>{
-    setTimeout(getWinner, 100);
+    getWinner()
 } 
 const tieGame = ()=> {fetch(randomCatsEndpoint)
     .then((response) => {
@@ -28,70 +28,70 @@ const tieGame = ()=> {fetch(randomCatsEndpoint)
     alert("We have a tie better luck next time.");
     setTimeout(reset, 1000);}
 console.log("Winning conditions is working");
-const winning = () =>{
-    if (square1.style.background === "green"
-        && square2.style.background === "green"
-        && square3.style.background === "green"){
+const winning = (playerOneChoice, playerTwoChoice) =>{
+    if (square1.style.background === playerOneChoice
+        && square2.style.background === playerOneChoice
+        && square3.style.background === playerOneChoice){
         winnerIs();
-    }else if (square1.style.background === "green"
-        && square4.style.background === "green"
-        && square7.style.background === "green"){
+    }else if (square1.style.background === playerOneChoice
+        && square4.style.background === playerOneChoice
+        && square7.style.background === playerOneChoice){
         winnerIs();
-    }else if (square1.style.background === "green"
-        && square5.style.background === "green"
-        && square9.style.background === "green"){
+    }else if (square1.style.background === playerOneChoice
+        && square5.style.background === playerOneChoice
+        && square9.style.background === playerOneChoice){
         winnerIs();
-    }else if (square2.style.background === "green"
-        && square5.style.background === "green"
-        && square8.style.background === "green"){
+    }else if (square2.style.background === playerOneChoice
+        && square5.style.background === playerOneChoice
+        && square8.style.background === playerOneChoice){
         winnerIs();
-    }else if (square3.style.background === "green"
-        && square6.style.background === "green"
-        && square9.style.background === "green"){
+    }else if (square3.style.background === playerOneChoice
+        && square6.style.background === playerOneChoice
+        && square9.style.background === playerOneChoice){
         winnerIs();
-    }else if (square3.style.background === "green"
-        && square5.style.background === "green"
-        && square7.style.background === "green"){
+    }else if (square3.style.background === playerOneChoice
+        && square5.style.background === playerOneChoice
+        && square7.style.background === playerOneChoice){
         winnerIs();      
-    }else if (square4.style.background === "green"
-        && square5.style.background === "green"
-        && square6.style.background === "green"){
+    }else if (square4.style.background === playerOneChoice
+        && square5.style.background === playerOneChoice
+        && square6.style.background === playerOneChoice){
         winnerIs();    
-    }else if (square7.style.background === "green"
-        && square8.style.background === "green"
-        && square9.style.background === "green"){
+    }else if (square7.style.background === playerOneChoice
+        && square8.style.background === playerOneChoice
+        && square9.style.background === playerOneChoice){
         winnerIs();    
-    }else if (square1.style.background === "<h2>O</h2>"
-        && square2.style.background === "<h2>O</h2>"
-        && square3.style.background === "<h2>O</h2>"){
+    }else if (square1.style.background === playerTwoChoice
+        && square2.style.background === playerTwoChoice
+        && square3.style.background === playerTwoChoice){
         winnerIs();
-    }else if (square1.style.background === "<h2>O</h2>"
-        && square4.style.background === "<h2>O</h2>"
-        && square7.style.background === "<h2>O</h2>"){
+    }else if (square1.style.background === playerTwoChoice
+        && square4.style.background === playerTwoChoice
+        && square7.style.background === playerTwoChoice){
         winnerIs();
-    }else if (square1.style.background === "<h2>O</h2>"
-        && square5.style.background === "<h2>O</h2>"
-        && square9.style.background === "<h2>O</h2>"){
+    }else if (square1.style.background === playerTwoChoice
+        && square5.style.background === playerTwoChoice
+        && square9.style.background === playerTwoChoice){
         winnerIs();
-    }else if (square2.style.background === "<h2>O</h2>"
-        && square5.style.background === "<h2>O</h2>"
-        && square8.style.background === "<h2>O</h2>"){
+    }else if (square2.style.background === playerTwoChoice
+        && square5.style.background === playerTwoChoice
+        && square8.style.background === playerTwoChoice){
         winnerIs();
-    }else if (square3.style.background === "<h2>O</h2>"
-        && square6.style.background === "<h2>O</h2>"
-        && square9.style.background === "<h2>O</h2>"){
+    }else if (square3.style.background === playerTwoChoice
+        && square6.style.background === playerTwoChoice
+        && square9.style.background === playerTwoChoice){
         winnerIs();
-    }else if (square3.style.background === "<h2>O</h2>"
-        && square5.style.background === "<h2>O</h2>"
-        && square7.style.background === "<h2>O</h2>"){
+    }else if (square3.style.background === playerTwoChoice
+        && square5.style.background === playerTwoChoice
+        && square7.style.background === playerTwoChoice){
         winnerIs();        
-    }else if (square4.style.background === "<h2>O</h2>"
-        && square5.style.background === "<h2>O</h2>"
-        && square6.style.background === "<h2>O</h2>"){
+    }else if (square4.style.background === playerTwoChoice
+        && square5.style.background === playerTwoChoice
+        && square6.style.background === playerTwoChoice){
         winnerIs();    
-    }else if (square7.style.background === "<h2>O</h2>"
-        && square8.style.background === "<h2>O</h2>"
-        && square9.style.background === "<h2>O</h2>"){
+    }else if (square7.style.background === playerTwoChoice
+        && square8.style.background === playerTwoChoice
+        && square9.style.background === playerTwoChoice){
         winnerIs();    
     }else if(counter >= 10){
        tieGame()
@@ -100,73 +100,72 @@ const winning = () =>{
     }
 }
 const winningTrad = () =>{
-    if (square1.innerHTML === "<h2>X</h2>"
-        && square2.innerHTML === "<h2>X</h2>"
-        && square3.innerHTML === "<h2>X</h2>"){
+    if (square1.innerHTML === playerOneChoice
+        && square2.innerHTML === playerOneChoice
+        && square3.innerHTML === playerOneChoice){
         winnerIs();
-    }else if (square1.innerHTML === "<h2>X</h2>"
-        && square4.innerHTML === "<h2>X</h2>"
-        && square7.innerHTML === "<h2>X</h2>"){
+    }else if (square1.innerHTML === playerOneChoice
+        && square4.innerHTML === playerOneChoice
+        && square7.innerHTML === playerOneChoice){
         winnerIs();
-    }else if (square1.innerHTML === "<h2>X</h2>"
-        && square5.innerHTML === "<h2>X</h2>"
-        && square9.innerHTML === "<h2>X</h2>"){
+    }else if (square1.innerHTML === playerOneChoice
+        && square5.innerHTML === playerOneChoice
+        && square9.innerHTML === playerOneChoice){
         winnerIs();
-    }else if (square2.innerHTML === "<h2>X</h2>"
-        && square5.innerHTML === "<h2>X</h2>"
-        && square8.innerHTML === "<h2>X</h2>"){
+    }else if (square2.innerHTML === playerOneChoice
+        && square5.innerHTML === playerOneChoice
+        && square8.innerHTML === playerOneChoice){
         winnerIs();
-    }else if (square3.innerHTML === "<h2>X</h2>"
-        && square6.innerHTML === "<h2>X</h2>"
-        && square9.innerHTML === "<h2>X</h2>"){
+    }else if (square3.innerHTML === playerOneChoice
+        && square6.innerHTML === playerOneChoice
+        && square9.innerHTML === playerOneChoice){
         winnerIs();
-    }else if (square3.innerHTML === "<h2>X</h2>"
-        && square5.innerHTML === "<h2>X</h2>"
-        && square7.innerHTML === "<h2>X</h2>"){
+    }else if (square3.innerHTML === playerOneChoice
+        && square5.innerHTML === playerOneChoice
+        && square7.innerHTML === playerOneChoice){
         winnerIs();      
-    }else if (square4.innerHTML === "<h2>X</h2>"
-        && square5.innerHTML === "<h2>X</h2>"
-        && square6.innerHTML === "<h2>X</h2>"){
+    }else if (square4.innerHTML === playerOneChoice
+        && square5.innerHTML === playerOneChoice
+        && square6.innerHTML === playerOneChoice){
         winnerIs();    
-    }else if (square7.innerHTML === "<h2>X</h2>"
-        && square8.innerHTML === "<h2>X</h2>"
-        && square9.innerHTML === "<h2>X</h2>"){
+    }else if (square7.innerHTML === playerOneChoice
+        && square8.innerHTML === playerOneChoice
+        && square9.innerHTML === playerOneChoice){
         winnerIs();    
-    }else if (square1.innerHTML === "<h2>O</h2>"
-        && square2.innerHTML === "<h2>O</h2>"
-        && square3.innerHTML === "<h2>O</h2>"){
+    }else if (square1.innerHTML === playerTwoChoice
+        && square2.innerHTML === playerTwoChoice
+        && square3.innerHTML === playerTwoChoice){
         winnerIs();
-    }else if (square1.innerHTML === "<h2>O</h2>"
-        && square4.innerHTML === "<h2>O</h2>"
-        && square7.innerHTML === "<h2>O</h2>"){
+    }else if (square1.innerHTML === playerTwoChoice
+        && square4.innerHTML === playerTwoChoice
+        && square7.innerHTML === playerTwoChoice){
         winnerIs();
-    }else if (square1.innerHTML === "<h2>O</h2>"
-        && square5.innerHTML === "<h2>O</h2>"
-        && square9.innerHTML === "<h2>O</h2>"){
+    }else if (square1.innerHTML === playerTwoChoice
+        && square5.innerHTML === playerTwoChoice
+        && square9.innerHTML === playerTwoChoice){
         winnerIs();
-    }else if (square2.innerHTML === "<h2>O</h2>"
-        && square5.innerHTML === "<h2>O</h2>"
-        && square8.innerHTML === "<h2>O</h2>"){
+    }else if (square2.innerHTML === playerTwoChoice
+        && square5.innerHTML === playerTwoChoice
+        && square8.innerHTML === playerTwoChoice){
         winnerIs();
-    }else if (square3.innerHTML === "<h2>O</h2>"
-        && square6.innerHTML === "<h2>O</h2>"
-        && square9.innerHTML === "<h2>O</h2>"){
+    }else if (square3.innerHTML === playerTwoChoice
+        && square6.innerHTML === playerTwoChoice
+        && square9.innerHTML === playerTwoChoice){
         winnerIs();
-    }else if (square3.innerHTML === "<h2>O</h2>"
-        && square5.innerHTML === "<h2>O</h2>"
-        && square7.innerHTML === "<h2>O</h2>"){
+    }else if (square3.innerHTML === playerTwoChoice
+        && square5.innerHTML === playerTwoChoice
+        && square7.innerHTML === playerTwoChoice){
         winnerIs();        
-    }else if (square4.innerHTML === "<h2>O</h2>"
-        && square5.innerHTML === "<h2>O</h2>"
-        && square6.innerHTML === "<h2>O</h2>"){
+    }else if (square4.innerHTML === playerTwoChoice
+        && square5.innerHTML === playerTwoChoice
+        && square6.innerHTML === playerTwoChoice){
         winnerIs();    
-    }else if (square7.innerHTML === "<h2>O</h2>"
-        && square8.innerHTML === "<h2>O</h2>"
-        && square9.innerHTML === "<h2>O</h2>"){
+    }else if (square7.innerHTML === playerTwoChoice
+        && square8.innerHTML === playerTwoChoice
+        && square9.innerHTML === playerTwoChoice){
         winnerIs();    
     }else if(counter >= 10){
-        alert("We have a tie better luck next time.");
-        setTimeout(reset, 100);
+        tieGame()
     }else {
         getActivePlayer();
     }

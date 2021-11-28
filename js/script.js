@@ -10,7 +10,9 @@ const getActivePlayer=()=>{
         activePlayer = 'Player One';
     }
     resetBtn.innerHTML= `Ready ${activePlayer}`;
-} 
+}
+let playerOneChoice;
+let playerTwoChoice; 
 // for (let i =0;  i <squares.length; i++) {
 //     squares[i].addEventListener('click', function(event) {
 //         if ((squares[i].innerHTML ==="<h2>X</h2>") || (squares[i].innerHTML ==="<h2>O</h2>")){
@@ -41,4 +43,4 @@ let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
 const playTraditional = document.querySelector("#traditional");
-const playChristmas = document.querySelector("#christmas")
+const playninja = document.querySelector("#ninja")
