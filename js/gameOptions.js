@@ -58,6 +58,7 @@ const ninjaVsPirate=()=>{
 
 playTraditional.addEventListener("click", traditional);
 playninja.addEventListener("click", ninjaVsPirate);
+playChristmas.addEventListener("click", christmasGame)
 class TicTacToe {
     constructor(playerOneChoice, playerTwoChoice){
         this.playerOneChoice = playerOneChoice;

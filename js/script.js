@@ -44,3 +44,4 @@ const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
 const playTraditional = document.querySelector("#traditional");
 const playninja = document.querySelector("#ninja")
+const playChristmas = document.querySelector("#christmas")
