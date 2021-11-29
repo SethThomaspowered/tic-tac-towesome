@@ -2,8 +2,12 @@ const squares = document.querySelectorAll(".square");
 // Counter determines which player is up.
 let counter = 1
 let activePlayer;
+
 const getplayerTwo = ()=>{
-    if (sessionStorage.getItem('playerTwo')){
+    if (sessionStorage.getItem('gameMode') === 'vsComputer'){
+        return playerTwo = "Wall-E";
+    }
+    else if (sessionStorage.getItem('playerTwo')){
         return playerTwo=(sessionStorage.getItem('playerTwo'))
     } else {
         return playerTwo ="Player Two";
@@ -59,7 +63,7 @@ resetBtn.addEventListener("click", function(event) {reset()});
 let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
-
+// This is the logic the computer uses to select a square.
 const computerTurn=()=>{
     if(counter%2===0){
         if (squares[counter-2].innerHTML !== playerOneChoice){
