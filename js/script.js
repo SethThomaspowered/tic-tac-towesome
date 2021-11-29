@@ -2,13 +2,26 @@ const squares = document.querySelectorAll(".square");
 // Counter determines which player is up.
 let counter = 1
 let activePlayer;
-let playerTwo = "Player Two"
+const getplayerTwo = ()=>{
+    if (sessionStorage.getItem('playerTwo')){
+        return playerTwo=(sessionStorage.getItem('playerTwo'))
+    } else {
+        return playerTwo ="Player Two";
+    }
+}
+const getplayerOne = ()=>{
+    if (sessionStorage.getItem('playerOne')){
+        return playerOne=(sessionStorage.getItem('playerOne'))
+    } else {
+        return playerOne ="Player One";
+    }
+}
 const resetBtn = document.querySelector("#reset");
 const getActivePlayer=()=>{
     if (counter%2===0){
         activePlayer = `${playerTwo}`;
     }else{
-        activePlayer = 'Player One';
+        activePlayer = `${playerOne}`;
     }
     resetBtn.innerHTML= `Ready ${activePlayer}`;
 }
@@ -38,7 +51,8 @@ const reset = () => {
     counter = 1;
     getActivePlayer();
 } 
-
+getplayerOne()
+getplayerTwo()
 resetBtn.addEventListener("click", event => reset());
 let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
