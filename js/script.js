@@ -2,10 +2,11 @@ const squares = document.querySelectorAll(".square");
 // Counter determines which player is up.
 let counter = 1
 let activePlayer;
+let playerTwo = "Player Two"
 const resetBtn = document.querySelector("#reset");
 const getActivePlayer=()=>{
     if (counter%2===0){
-        activePlayer = 'Player Two';
+        activePlayer = `${playerTwo}`;
     }else{
         activePlayer = 'Player One';
     }

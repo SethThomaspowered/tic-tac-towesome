@@ -1,4 +1,9 @@
-.container {
+body{
+    text-align: center;
+    background-color: midnightblue;
+    color: #fff;
+    min-height: 100vh;
+}.container {
     background: black;
     display: inline-block;
     margin: 25px 3rem;
@@ -20,12 +25,9 @@
    font-weight: bold;
    background: lemonchiffon;
    cursor: pointer;
+   color: #000;
 }
-body{
-    text-align: center;
-    background-color: midnightblue;
-    min-height: 100vh;
-}
+
 h1 {
     color: aquamarine;
 }
