@@ -1,6 +1,10 @@
 const playerOneName = document.querySelector("[name='playerOne']");
 const playerTwoName = document.querySelector("[name='playerTwo']");
 const defaultBtn = document.querySelector('#defaultbtn');
+const playTraditional = document.querySelector("#traditional");
+const playninja = document.querySelector("#ninja");
+const playChristmas = document.querySelector("#christmas");
+
 let storage = sessionStorage;
 let player1;
 let player2;
