@@ -168,13 +168,13 @@ class TicTacToe {
     game(){
         for (let i =0;  i <squares.length; i++) {
             squares[i].addEventListener('click', function(event) {
-                if ((squares[i].innerHTML ===playerOneChoice) || (squares[i].innerHTML ===playerTwoChoice)){
+                if ((squares[i].innerHTML ===this.playerOneChoice) || (squares[i].innerHTML ===this.playerTwoChoice)){
                     alert("This space has already been selected. Choose another space");
                 }else{
                     if (counter%2 === 0){
-                        squares[i].innerHTML =playerTwoChoice;
+                        squares[i].innerHTML =this.playerTwoChoice;
                     }else{
-                        squares[i].innerHTML =playerOneChoice;
+                        squares[i].innerHTML =this.playerOneChoice;
                     }
                     counter++;
                     winningTrad();
