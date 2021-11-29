@@ -55,7 +55,25 @@ const reset = () => {
 getplayerOne()
 getplayerTwo()
 
-// resetBtn.addEventListener("click", event => reset());
+resetBtn.addEventListener("click", function(event) {reset()});
 let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
+
+const computerTurn=()=>{
+    if(counter%2===0){
+        if (squares[counter-2].innerHTML !== playerOneChoice){
+            squares[counter-2].innerHTML = playerTwoChoice;
+            
+        }else if (squares[counter-1].innerHTML !== playerOneChoice){
+            squares[counter-1].innerHTML = playerTwoChoice;
+            
+        }else if(squares[counter].innerHTML !== playerOneChoice){
+            squares[counter].innerHTML = playerTwoChoice;
+            
+        }else{
+            squares[counter+1].innerHTML = playerTwoChoice;
+            
+        }
+    }
+}
