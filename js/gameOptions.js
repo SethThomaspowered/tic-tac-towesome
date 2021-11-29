@@ -56,7 +56,27 @@ const ninjaVsPirate=()=>{
     )}
 }
 
+const hVr=()=>{
+    playerOneChoice="<h2>X</h2>";
+    playerTwoChoice="<h2>O</h2>";
+    player2 ="Wall-E";
 
+    for (let i =0;  i <squares.length; i++) {
+        squares[i].addEventListener('click', function(event) {
+            if ((squares[i].innerHTML ===playerOneChoice) || (squares[i].innerHTML ===playerTwoChoice)){
+                alert("This space has already been selected. Choose another space");
+            }else{
+                if (counter%2 === 0){
+                    computerTurn();
+                }else{
+                    squares[i].innerHTML =playerOneChoice;
+                }
+                counter++;
+                winningTrad();
+            }
+        }
+    )}
+}
 class TicTacToe {
     constructor(playerOneChoice, playerTwoChoice){
         this.playerOneChoice = playerOneChoice;
@@ -187,7 +207,10 @@ const getGameMode = ()=>{
         return christmasGame();
     }else if (sessionStorage.getItem("gameMode") === "ninjaVsPirate"){
         return ninjaVsPirate();
-    } else {
+    } else if(sessionStorage.getItem("gameMode") === "vsComputer"){
+        return hVr();
+    }
+    else {
         return traditional();
     }
 }

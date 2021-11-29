@@ -4,7 +4,7 @@ const defaultBtn = document.querySelector('#defaultbtn');
 const playTraditional = document.querySelector("#traditional");
 const playninja = document.querySelector("#ninja");
 const playChristmas = document.querySelector("#christmas");
-
+const playVsComputer = document.querySelector("#vsComputer")
 let storage = sessionStorage;
 let player1;
 let player2;
@@ -22,6 +22,9 @@ playninja.addEventListener("click", function(event){
 })
 playChristmas.addEventListener("click", function(event){
     gameMode=storage.setItem("gameMode", "christmasGame");
+})
+playVsComputer.addEventListener("click", function(event){
+    gameMode=storage.setItem("gameMode", "vsComputer");
 })
 defaultBtn.addEventListener('click', function(event){
     storage.removeItem("playerOne");

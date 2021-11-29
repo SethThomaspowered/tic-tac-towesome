@@ -7,7 +7,20 @@ const square6 = document.querySelector('.six');
 const square7 = document.querySelector('.seven');
 const square8 = document.querySelector('.eight');
 const square9 = document.querySelector('.nine');
+let player1Score = 0;
+let player2Score = 0;
+let tieScore = 0;
+const p2s = document.querySelector('#p2s');
+const p1s = document.querySelector('#p1s');
+const catScore = document.querySelector('#catScore');
 const getWinner=()=>{
+    if(activePlayer === `${playerTwo}`){
+        player2Score ++;
+        p2s.innerHTML =`${player2Score}`;
+    } else {
+        player1Score ++;
+        p1s.innerHTML = `${player1Score}`;
+    }
     alert(`${activePlayer} is the winner`);
     reset();
 }
@@ -25,6 +38,8 @@ const tieGame = ()=> {fetch(randomCatsEndpoint)
     }).catch(function (err){
         console.log(err);
     })
+    tieScore ++;
+    catScore.innerHTML=`${tieScore}`;
     alert("We have a tie better luck next time.");
     setTimeout(reset, 1000);}
 console.log("Winning conditions is working");
@@ -32,22 +47,27 @@ const winning = (playerOneChoice, playerTwoChoice) =>{
     if (square1.style.background === playerOneChoice
         && square2.style.background === playerOneChoice
         && square3.style.background === playerOneChoice){
+       
         winnerIs();
     }else if (square1.style.background === playerOneChoice
         && square4.style.background === playerOneChoice
         && square7.style.background === playerOneChoice){
+        
         winnerIs();
     }else if (square1.style.background === playerOneChoice
         && square5.style.background === playerOneChoice
         && square9.style.background === playerOneChoice){
+        
         winnerIs();
     }else if (square2.style.background === playerOneChoice
         && square5.style.background === playerOneChoice
         && square8.style.background === playerOneChoice){
+        
         winnerIs();
     }else if (square3.style.background === playerOneChoice
         && square6.style.background === playerOneChoice
         && square9.style.background === playerOneChoice){
+        
         winnerIs();
     }else if (square3.style.background === playerOneChoice
         && square5.style.background === playerOneChoice
@@ -103,6 +123,7 @@ const winningTrad = () =>{
     if (square1.innerHTML === playerOneChoice
         && square2.innerHTML === playerOneChoice
         && square3.innerHTML === playerOneChoice){
+        
         winnerIs();
     }else if (square1.innerHTML === playerOneChoice
         && square4.innerHTML === playerOneChoice
