@@ -14,7 +14,17 @@ playerOneName.addEventListener('keyup', function(event){
 playerTwoName.addEventListener('keyup', function(event){
     player2 = storage.setItem("playerTwo", playerTwoName.value)
 })
+playTraditional.addEventListener("click", function(event){
+    gameMode=storage.setItem("gameMode", "traditional");
+})
+playninja.addEventListener("click", function(event){
+    gameMode=storage.setItem("gameMode", "ninjaVsPirate");
+})
+playChristmas.addEventListener("click", function(event){
+    gameMode=storage.setItem("gameMode", "christmasGame");
+})
 defaultBtn.addEventListener('click', function(event){
     storage.removeItem("playerOne");
     storage.removeItem("playerTwo");
+    storage.removeItem('gameMode')
 })

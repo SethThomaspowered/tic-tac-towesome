@@ -56,9 +56,7 @@ const ninjaVsPirate=()=>{
     )}
 }
 
-playTraditional.addEventListener("click", traditional);
-playninja.addEventListener("click", ninjaVsPirate);
-playChristmas.addEventListener("click", christmasGame)
+
 class TicTacToe {
     constructor(playerOneChoice, playerTwoChoice){
         this.playerOneChoice = playerOneChoice;
@@ -184,3 +182,13 @@ class TicTacToe {
     }    
     
 }
+const getGameMode = ()=>{
+    if (sessionStorage.getItem("gameMode") === "christmasGame"){
+        return christmasGame();
+    }else if (sessionStorage.getItem("gameMode") === "ninjaVsPirate"){
+        return ninjaVsPirate();
+    } else {
+        return traditional();
+    }
+}
+getGameMode()

@@ -16,6 +16,7 @@ const getplayerOne = ()=>{
         return playerOne ="Player One";
     }
 }
+
 const resetBtn = document.querySelector("#reset");
 const getActivePlayer=()=>{
     if (counter%2===0){
@@ -53,7 +54,8 @@ const reset = () => {
 } 
 getplayerOne()
 getplayerTwo()
-resetBtn.addEventListener("click", event => reset());
+
+// resetBtn.addEventListener("click", event => reset());
 let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
