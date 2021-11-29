@@ -59,6 +59,7 @@ const ninjaVsPirate=()=>{
 const hVr=()=>{
     playerOneChoice="<h2>X</h2>";
     playerTwoChoice="<h2>O</h2>";
+    player2 ="Wall-E";
 
     for (let i =0;  i <squares.length; i++) {
         squares[i].addEventListener('click', function(event) {
@@ -206,8 +207,11 @@ const getGameMode = ()=>{
         return christmasGame();
     }else if (sessionStorage.getItem("gameMode") === "ninjaVsPirate"){
         return ninjaVsPirate();
-    } else {
+    } else if(sessionStorage.getItem("gameMode") === "vsComputer"){
+        return hVr();
+    }
+    else {
         return traditional();
     }
 }
-// getGameMode()
+getGameMode()
