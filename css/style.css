@@ -27,7 +27,12 @@ body{
    cursor: pointer;
    color: #000;
 }
-
+.red{
+    background: red;
+}
+.green{
+    background: green;
+}
 h1 {
     color: aquamarine;
 }
