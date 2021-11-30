@@ -14,6 +14,9 @@ const getplayerTwo = ()=>{
     }
 }
 const getplayerOne = ()=>{
+    if (sessionStorage.getItem('gameMode') === 'vsComputer'){
+        return playerOne = "Skynet";
+    }
     if (sessionStorage.getItem('playerOne')){
         return playerOne=(sessionStorage.getItem('playerOne'))
     } else {
@@ -95,5 +98,58 @@ const computerTurn=()=>{
             squares[counter+1].innerHTML = playerTwoChoice;
             
         }
+    }
+}
+const computerTurn2= () =>{
+    if(notPlayed(squares[4])){
+        squares[4].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[0])){
+        squares[0].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[8])){
+        squares[8].innerHTML =playerTwoChoice;
+    }else if (notPlayed(squares[2])){
+        squares[2].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[6])){
+        squares[6].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[3])){
+        squares[3].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[2])){
+        squares[2].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[7])){
+        squares[7].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[5])){
+        squares[5].innerHTML = playerTwoChoice;
+    }else if (notPlayed(squares[1])){
+        squares[1].innerHTML = playerTwoChoice;
+    }
+}
+function notPlayed(space){
+    if ((space.innerHTML !== playerOneChoice) && (space.innerHTML !== playerTwoChoice)){
+        return true;
+    }else{
+        return false;
+    }
+}
+const computerTurn3= () =>{
+    if(notPlayed(squares[4])){
+        squares[4].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[0])){
+        squares[0].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[8])){
+        squares[8].innerHTML =playerOneChoice;
+    }else if (notPlayed(squares[2])){
+        squares[2].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[6])){
+        squares[6].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[3])){
+        squares[3].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[2])){
+        squares[2].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[7])){
+        squares[7].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[5])){
+        squares[5].innerHTML = playerOneChoice;
+    }else if (notPlayed(squares[1])){
+        squares[1].innerHTML = playerOneChoice;
     }
 }

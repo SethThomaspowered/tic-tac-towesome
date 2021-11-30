@@ -31,6 +31,7 @@ const traditional=()=>{
                 }else{
                     squares[i].innerHTML =playerOneChoice;
                 }
+                
                 counter++;
                 winningTrad();
             }
@@ -69,7 +70,7 @@ const hVr=()=>{
                 alert("This space has already been selected. Choose another space");
             }else{
                 if (counter%2 === 0){
-                    computerTurn();
+                    computerTurn2();
                 }else{
                     squares[i].innerHTML =playerOneChoice;
                 }
@@ -77,6 +78,26 @@ const hVr=()=>{
                 winningTrad();
             }
         }
+    )}
+}
+const rVr=()=>{
+    playerOneChoice="<h2>X</h2>";
+    playerTwoChoice="<h2>O</h2>";
+    player1 ="Skynet"
+    player2 ="Wall-E";
+
+    for (let i =0;  i <squares.length; i++) {
+        squares[i].addEventListener('mouseover', function(event) {
+            
+            if (counter%2 === 0){
+                computerTurn();
+            }else{
+                computerTurn3();
+            }
+            counter++;
+            winningTrad();
+            }
+        
     )}
 }
 class TicTacToe {
@@ -210,7 +231,7 @@ const getGameMode = ()=>{
     }else if (sessionStorage.getItem("gameMode") === "ninjaVsPirate"){
         return ninjaVsPirate();
     } else if(sessionStorage.getItem("gameMode") === "vsComputer"){
-        return hVr();
+        return rVr();
     }
     else {
         return traditional();
