@@ -64,7 +64,23 @@ let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
 // This is the logic the computer uses to select a square.
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+      this.sound.play();
+    }
+    this.stop = function(){
+      this.sound.pause();
+    }
+}
+let mySound = new sound("https://bigsoundbank.com/UPLOAD/mp3/0311.mp3");
 const computerTurn=()=>{
+    mySound.play()
     if(counter%2===0){
         if (squares[counter-2].innerHTML !== playerOneChoice){
             squares[counter-2].innerHTML = playerTwoChoice;

@@ -8,7 +8,8 @@ const playVsComputer = document.querySelector("#vsComputer")
 let storage = sessionStorage;
 let player1;
 let player2;
-let mySound = new sound("https://bigsoundbank.com/UPLOAD/mp3/0311.mp3");
+
+
 playerOneName.addEventListener('keyup', function(event){
     player1 = storage.setItem("playerOne", playerOneName.value)
 })

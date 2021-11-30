@@ -1,16 +1,18 @@
 const christmasGame=()=>{
+    playerOneChoice='<h2 style="background: green; color: green; padding-right: 20px; padding-left: 20px;">0</h2>';
+    playerTwoChoice='<h2 style="background: red; color: red; padding-right: 20px; padding-left: 20px;">0</h2>';
     for (let i =0;  i <squares.length; i++) {
     squares[i].addEventListener('click', function(event) {
-        if ((squares[i].style.background ==="red") || (squares[i].style.background ==="green")){
+        if ((squares[i].innerHTML ==playerTwoChoice) || (squares[i].innerHTML ==playerOneChoice)){
             alert("This space has already been selected. Choose another space");
         }else{
             if (counter%2 === 0){
-                squares[i].style.background ="red";
+                squares[i].innerHTML=playerTwoChoice;
             }else{
-                squares[i].style.background ="green";
+                squares[i].innerHTML =playerOneChoice;
             }
             counter++;
-            winning();
+            winningTrad();
         }
     }
 )}
