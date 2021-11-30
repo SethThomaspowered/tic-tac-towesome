@@ -3,7 +3,11 @@ body{
     background-color: midnightblue;
     color: #fff;
     min-height: 100vh;
-}.container {
+}
+table{
+    background: #ff5400;
+}
+.container {
     background: black;
     display: inline-block;
     margin: 25px 3rem;
@@ -45,5 +49,6 @@ img {
     box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
 }
 footer{
- justify-content: flex-end;   
+    justify-content: flex-end;
+    background: #827081
 }
