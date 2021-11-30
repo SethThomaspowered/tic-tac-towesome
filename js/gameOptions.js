@@ -81,8 +81,8 @@ const hVr=()=>{
     )}
 }
 const rVr=()=>{
-    playerOneChoice="<h2>X</h2>";
-    playerTwoChoice="<h2>O</h2>";
+    playerOneChoice='<img src="https://media4.giphy.com/media/dAC1oKY7OQzMQ/200w_d.gif?cid=1bbf666ea8cramuv4ff0mspmvdktycl0h9v7j76rfrti49u3&amp;rid=200w_d.gif&amp;ct=g">';
+    playerTwoChoice='<img src="https://media4.giphy.com/media/iGJNOadhvBMuk/200w_d.gif?cid=1bbf666e5pmhgl3oze9kdd7qjgdj2mgpkkml6nifj6nnbvmw&amp;rid=200w_d.gif&amp;ct=g">';
     player1 ="Skynet"
     player2 ="Wall-E";
 
@@ -231,6 +231,8 @@ const getGameMode = ()=>{
     }else if (sessionStorage.getItem("gameMode") === "ninjaVsPirate"){
         return ninjaVsPirate();
     } else if(sessionStorage.getItem("gameMode") === "vsComputer"){
+        return hVr();
+    } else if(sessionStorage.getItem("gameMode") === "computerVsComputer"){
         return rVr();
     }
     else {

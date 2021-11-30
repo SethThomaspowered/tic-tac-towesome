@@ -28,6 +28,9 @@ playChristmas.addEventListener("click", function(event){
 playVsComputer.addEventListener("click", function(event){
     gameMode=storage.setItem("gameMode", "vsComputer");
 })
+computerVsComputer.addEventListener("click", function(event){
+    gameMode=storage.setItem("gameMode", "computerVsComputer");
+})
 defaultBtn.addEventListener('click', function(event){
     storage.removeItem("playerOne");
     storage.removeItem("playerTwo");

@@ -44,8 +44,8 @@ button {
     text-align: center;
 }    
 img {
-    height: 350px;
-    width: auto;
+    height: 80px;
+    width: 80px;
     box-shadow: 10px 10px 32px -12px rgba(0,0,0,0.75);
 }
 footer{
