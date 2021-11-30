@@ -14,7 +14,7 @@ const christmasGame=()=>{
             counter++;
             winningTrad();
         }
-    }
+    }, true
 )}
 }
 const traditional=()=>{

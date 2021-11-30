@@ -25,7 +25,7 @@ const getWinner=()=>{
     reset();
 }
 const winnerIs=()=>{
-    getWinner()
+    setTimeout(getWinner, 10);
 } 
 const tieGame = ()=> {fetch(randomCatsEndpoint)
     .then((response) => {
@@ -40,85 +40,14 @@ const tieGame = ()=> {fetch(randomCatsEndpoint)
     })
     tieScore ++;
     catScore.innerHTML=`${tieScore}`;
-    alert("We have a tie better luck next time.");
-    setTimeout(reset, 1000);}
+    setTimeout(function (){
+        alert("We have a tie better luck next time.");
+        reset();    
+    }, 50);
+    
+}    
 console.log("Winning conditions is working");
-const winning = (playerOneChoice, playerTwoChoice) =>{
-    if (square1.style.background === playerOneChoice
-        && square2.style.background === playerOneChoice
-        && square3.style.background === playerOneChoice){
-       
-        winnerIs();
-    }else if (square1.style.background === playerOneChoice
-        && square4.style.background === playerOneChoice
-        && square7.style.background === playerOneChoice){
-        
-        winnerIs();
-    }else if (square1.style.background === playerOneChoice
-        && square5.style.background === playerOneChoice
-        && square9.style.background === playerOneChoice){
-        
-        winnerIs();
-    }else if (square2.style.background === playerOneChoice
-        && square5.style.background === playerOneChoice
-        && square8.style.background === playerOneChoice){
-        
-        winnerIs();
-    }else if (square3.style.background === playerOneChoice
-        && square6.style.background === playerOneChoice
-        && square9.style.background === playerOneChoice){
-        
-        winnerIs();
-    }else if (square3.style.background === playerOneChoice
-        && square5.style.background === playerOneChoice
-        && square7.style.background === playerOneChoice){
-        winnerIs();      
-    }else if (square4.style.background === playerOneChoice
-        && square5.style.background === playerOneChoice
-        && square6.style.background === playerOneChoice){
-        winnerIs();    
-    }else if (square7.style.background === playerOneChoice
-        && square8.style.background === playerOneChoice
-        && square9.style.background === playerOneChoice){
-        winnerIs();    
-    }else if (square1.style.background === playerTwoChoice
-        && square2.style.background === playerTwoChoice
-        && square3.style.background === playerTwoChoice){
-        winnerIs();
-    }else if (square1.style.background === playerTwoChoice
-        && square4.style.background === playerTwoChoice
-        && square7.style.background === playerTwoChoice){
-        winnerIs();
-    }else if (square1.style.background === playerTwoChoice
-        && square5.style.background === playerTwoChoice
-        && square9.style.background === playerTwoChoice){
-        winnerIs();
-    }else if (square2.style.background === playerTwoChoice
-        && square5.style.background === playerTwoChoice
-        && square8.style.background === playerTwoChoice){
-        winnerIs();
-    }else if (square3.style.background === playerTwoChoice
-        && square6.style.background === playerTwoChoice
-        && square9.style.background === playerTwoChoice){
-        winnerIs();
-    }else if (square3.style.background === playerTwoChoice
-        && square5.style.background === playerTwoChoice
-        && square7.style.background === playerTwoChoice){
-        winnerIs();        
-    }else if (square4.style.background === playerTwoChoice
-        && square5.style.background === playerTwoChoice
-        && square6.style.background === playerTwoChoice){
-        winnerIs();    
-    }else if (square7.style.background === playerTwoChoice
-        && square8.style.background === playerTwoChoice
-        && square9.style.background === playerTwoChoice){
-        winnerIs();    
-    }else if(counter >= 10){
-       tieGame()
-    }else {
-        getActivePlayer();
-    }
-}
+// x
 const winningTrad = () =>{
     if (square1.innerHTML === playerOneChoice
         && square2.innerHTML === playerOneChoice
