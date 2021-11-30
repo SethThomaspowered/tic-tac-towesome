@@ -2,8 +2,12 @@ const squares = document.querySelectorAll(".square");
 // Counter determines which player is up.
 let counter = 1
 let activePlayer;
+
 const getplayerTwo = ()=>{
-    if (sessionStorage.getItem('playerTwo')){
+    if (sessionStorage.getItem('gameMode') === 'vsComputer'){
+        return playerTwo = "Wall-E";
+    }
+    else if (sessionStorage.getItem('playerTwo')){
         return playerTwo=(sessionStorage.getItem('playerTwo'))
     } else {
         return playerTwo ="Player Two";
@@ -16,6 +20,7 @@ const getplayerOne = ()=>{
         return playerOne ="Player One";
     }
 }
+
 const resetBtn = document.querySelector("#reset");
 const getActivePlayer=()=>{
     if (counter%2===0){
@@ -53,10 +58,26 @@ const reset = () => {
 } 
 getplayerOne()
 getplayerTwo()
-resetBtn.addEventListener("click", event => reset());
+
+resetBtn.addEventListener("click", function(event) {reset()});
 let apiKey = "e1a391b0-3601-4e54-af99-66499eaba992";
 const randomCatsEndpoint  =`https://api.thecatapi.com/v1/images/search?`;
 const randomCatImage = document.querySelector("#randomCatImage");
-const playTraditional = document.querySelector("#traditional");
-const playninja = document.querySelector("#ninja")
-const playChristmas = document.querySelector("#christmas")
+// This is the logic the computer uses to select a square.
+const computerTurn=()=>{
+    if(counter%2===0){
+        if (squares[counter-2].innerHTML !== playerOneChoice){
+            squares[counter-2].innerHTML = playerTwoChoice;
+            
+        }else if (squares[counter-1].innerHTML !== playerOneChoice){
+            squares[counter-1].innerHTML = playerTwoChoice;
+            
+        }else if(squares[counter].innerHTML !== playerOneChoice){
+            squares[counter].innerHTML = playerTwoChoice;
+            
+        }else{
+            squares[counter+1].innerHTML = playerTwoChoice;
+            
+        }
+    }
+}
