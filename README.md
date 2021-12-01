@@ -5,18 +5,21 @@ Developed by Seth Thomas as part of the SEI offered by General Assembly and Inte
 The mission build a Tic-Tac-Toe game from scratch.
 
 ## User Stories
-As a user, you should  be able to play a game of tic tac toe.
-As a user, when you click on a square a X or an O should appear.
-As a user, you should be notified when you win.
-As a user, you should not be able to click on the same square twice in a game.
-As a user, you would like to play again without refreshing the page.
-As a user, you would like to customize your experience.
+- As a user, you should  be able to play a game of tic tac toe.
+- As a user, when you click on a square a X or an O should appear.
+- As a user, you should be notified when you win.
+- As a user, you should not be able to click on the same square twice in a game.
+- As a user, you would like to play again without refreshing the page.
+- As a user, you would like to customize your experience.
 
 ## Technologies Used
 - HTML for framework of the site.
 - CSS for styling.
 - Javascript for all of the heavylifting.
 - [Cat Api](https://thecatapi.com)
+- [Big Sound Bank]("https://bigsoundbank.com)
 - [Giphy Api](https://giphy.com)
 - [Font Awesome](https://fontawesome.com)
 
+## From Hello World to Skynet
+My project started small by creating a name for the repo and creating the index.html, style.css, and  script.js. I wanted my project to be unique.
