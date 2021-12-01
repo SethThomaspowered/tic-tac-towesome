@@ -28,7 +28,8 @@ Now that I had the unique factor on lock down, I was able to focus on the task a
 
 Next step was proving that by clicking on a square I could you change the color of the square. After that it was matter of looping through the squares and adding an if statement to alternate between player one and player two. Like so.
 
-`for (let i =0;  i <squares.length; i++) {
+```
+for (let i =0;  i <squares.length; i++) {
      squares[i].addEventListener('click', function(event) {
          if ((squares[i].innerHTML ==="<h2>X</h2>") || (squares[i].innerHTML ==="<h2>O</h2>")){
              alert("This space has already been selected. Choose another space");
@@ -38,4 +39,4 @@ Next step was proving that by clicking on a square I could you change the color 
              }else{
                  squares[i].innerHTML ="<h2>X</h2>";
              }
-`
+```
