@@ -63,3 +63,15 @@ In order to get it to work I had to change my input to:
 playerOneChoice ='<i class="fas fa-user-ninja" aria-hidden="true"></i>';
 
 ```
+
+## Features
+Program has a scoreboard on the main screen that tallies the number of wins for Player One and Player Two as well as the Ties.
+
+Growing up we used to say when there was a tied game that "The Cat Won" so I used the The Cat Api to produce a random cat picture after every tie.
+I created three player vs player modes, but more could be added.
+
+Players can set their names to whatever they choose on the settings page, or click on the default button to return to the original settings.
+
+I created a game mode against an AI and I added a sound effect on the AI's turn.
+
+Finally, I played around with other AI logic and developed a computer vs computer mode. I decided this should be a battle between Skynet and Wall-E for world domination. Hope you enjoy the result of this epic struggle. 
