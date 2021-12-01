@@ -22,6 +22,7 @@ The mission build a Tic-Tac-Toe game from scratch.
 - [Font Awesome](https://fontawesome.com)
 
 ## From Hello World to Skynet
+### In the Beginning
 My project started small by creating a name for the repo and creating the index.html, style.css, and  script.js. I wanted my project to be unique. Fastest way to achieve this goal was to give the project a silly name playing off the game Tic-Tac-Toe and my expectance for how it would turn out, awesome. Tic-Tac-Towesome was born. 
 
 Now that I had the unique factor on lock down, I was able to focus on the task at hand, recreating a childhood game. I tinkered around with getting the gameboard to display on the screen until I settled on a grid with 80px squares.
@@ -39,4 +40,26 @@ for (let i =0;  i <squares.length; i++) {
              }else{
                  squares[i].innerHTML ="<h2>X</h2>";
              }
+```
+
+### But how do I win
+Once I was confident that I was able to select spaces and that spaces would not be repeated. I started to think about how I would go about determining a winner. I decided to use a series of if , else if, and else conditions. If squares 1, 2, and 3 had Xs then player One won, else it would continue to the next condition. Here I learned a valuable lesson about being consistent and detail oriented. 
+I was experiencing a bug where I was getting a false response even though I was comparing the innerHTML with the same HTML that I had put in the div.
+I was putting in:
+```
+playerOneChoice ="<i class='fas fa-user-ninja'></i>";
+
+```
+And this was coming out:
+
+```
+square[1].innerHTML ='<i class="fas fa-user-ninja" aria-hidden="true"></i>';
+
+```
+
+In order to get it to work I had to change my input to:
+
+```
+playerOneChoice ='<i class="fas fa-user-ninja" aria-hidden="true"></i>';
+
 ```
