@@ -41,13 +41,13 @@ const tieGame = ()=> {fetch(randomCatsEndpoint)
     tieScore ++;
     catScore.innerHTML=`${tieScore}`;
     setTimeout(function (){
-        alert("We have a tie better luck next time.");
+        alert("We have a tie. The Cat wins! Better luck next time.");
         reset();    
     }, 50);
     
 }    
-console.log("Winning conditions is working");
-// x
+
+// This is the logic that determines.
 const winningTrad = () =>{
     if (square1.innerHTML === playerOneChoice
         && square2.innerHTML === playerOneChoice
